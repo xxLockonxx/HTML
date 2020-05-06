@@ -6,6 +6,26 @@
     <style>
         /*
             postion 속성
+             1) static
+              - 모든 태그의 기본 position 속성값
+              - 상대좌표영역에 출력
+              - 이동속성(left, top, right, bottom) 적용 X
+
+             2) relative
+              - 상대좌표영역에 출력
+              - 위치 속성값이 absolute인 자식태그요소와 부모 관계설정으로 사용
+              - 제한된(현재 위치를 기준으로) 이동속성 적용 O
+             
+             3) absolute
+              - 절대좌표영역에 출력
+              - 위치이동 속성(left, top, right, bottom)으로 자유롭게 위치 설정
+            
+             4) fixed
+              - 절대좌표영억에 고정 출력
+              - 위치이동 속성(left, top, right, bottom)으로 자유롭게 위치 설정
+              - 브라우저 스크롤을 이동해도 화면에 고정
+
+
         */
         section{
             display : inline-block;
@@ -23,6 +43,64 @@
         section > div:nth-of-type(2) {background : green;}
         section > div:nth-of-type(3) {background : blue;}
         
+        /* position: static */
+        section:nth-child(1) > div:nth-of-type(1) {
+            position: static; /*이건 default값이라서 해줄 필요가 없음*/  
+            left : 10px;
+            bottom : 10px; /*이렇게 해도 이동하지 않음.*/ 
+        }
+        section:nth-child(1) > div:nth-of-type(2) {}
+        section:nth-child(1) > div:nth-of-type(3) {}
+        
+        /* position: relative */
+        section:nth-of-type(2) > div:nth-of-type(1) {
+            position: relative;
+            left : 10px;
+            top : 10px /*근데 이걸로 이동안함.*/
+        }
+        section:nth-of-type(2) > div:nth-of-type(2) {
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        section:nth-of-type(2) > div:nth-of-type(3) {
+            position: relative;
+            left: -10px;
+            top: -10px;
+        }
+
+        /* position: absolute */
+        section:nth-of-type(3){
+            position: relative;
+        }
+        section:nth-of-type(3) >div:nth-of-type(1) {
+            position: absolute;
+            left: 10px;
+            top : 60px;
+        }
+
+        section:nth-of-type(3) >div:nth-of-type(2) {
+            position: absolute;
+            right: 10px;
+            top: 60px;
+        }
+        section:nth-of-type(3) >div:nth-of-type(3) {
+            position : absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        /* position: fixed */
+
+        section:nth-of-type(4){
+            /* fixed된 자식태그와 위치 관계설정 적용안됨.*/
+            position: relative;
+        }
+        section:nth-of-type(4) >div {
+            position: fixed;
+        }
+        section:nth-of-type(4) >div:nth-of-type(1) {right: 10px; top:10px;}
+        section:nth-of-type(4) >div:nth-of-type(2) {right: 20px; top:20px;}
+        section:nth-of-type(4) >div:nth-of-type(3) {right: 30px; top:30px;}
 
 
     </style>
