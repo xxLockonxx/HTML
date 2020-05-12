@@ -14,39 +14,6 @@ body{}
     
 }
 
-/* 게시판 - 공통 */
-#board {
-    width : 720px;
-    margin: 68px auto;
-}
-
-#board table {
-    width: 100%;
-    border-top: 2px solid #111;
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-#board table th {
-    padding: 12px;
-    border-top: 1px solid #d1dee2;
-    border-bottom: 1px solid #d1dee2;
-    background: #e5ecef;
-    color: #383838;
-}
-
-#board table td {
-    padding: 8px 5px;
-    border-top: 1px solid #e9e9e9;
-    border-bottom: 1px solid #e9e9e9;
-}
-
-#board.list > .btnWrite {
-    padding: 7px;
-    border: 1px solid #3b3c3f;
-    background: #4b545e;
-    color: #fff;
-}
 
 /* 회원 - 로그인*/
 #user {}
@@ -224,6 +191,59 @@ color: #111;
     color: #111;
 }
 
+/* 게시판 - 공통 */
+#board {
+    width : 720px;
+    margin: 68px auto;
+}
+
+#board table {
+    width: 100%;
+    border-top: 2px solid #111;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#board table th {
+    padding: 12px;
+    border-top: 1px solid #d1dee2;
+    border-bottom: 1px solid #d1dee2;
+    background: #e5ecef;
+    color: #383838;
+}
+
+#board table td {
+    padding: 8px 5px;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+#board table td:nth-child(1) {
+    width: 100px;
+    background: #f5f8f9;
+    text-align: center;
+}
+
+#board table input{
+    width: 100%;
+    height: 24px;
+    border: 0;
+}
+
+#board table textarea {
+    width: 100%;
+    height: 280px;
+    resize: none;
+    text-indent: 10px;
+    border: 0;
+}
+
+
+
+#board table {}
+#board .btnWrite { padding: 7px; border: 1px solid #3b3c3f; background: #4b545e; color: #fff;}
+#board .btnCancel{ padding: 8px; border: 1px solid #bebebe; background: #fdfdfd;}
+
 
 /* 게시판 - 글목록 */
 #board.list {
@@ -241,7 +261,7 @@ color: #111;
 #board.list > article > table tr {}
 #board.list > article > table tr > th {}
 #board.list > article > table tr > td {}
-#board.list > article > table tr > td:nth-child(1) {width:  50px; text-align: center;}
+#board.list > article > table tr > td:nth-child(1) {width:  50px; text-align: center; background: #fff;}
 #board.list > article > table tr > td:nth-child(2) {width:  auto; text-align: left;}
 #board.list > article > table tr > td:nth-child(3) {width: 100px; text-align: center;}
 #board.list > article > table tr > td:nth-child(4) {width: 100px; text-align: center;}
@@ -269,8 +289,20 @@ color: #111;
     position: absolute;
     bottom: 14px;
     right: 0px;
+    
 }
 
 /* 게시판-글보기 */
+
 /* 게시판-글쓰기 */
+#board.write {}
+#board.write form > div {
+    margin-top: 10px;
+    text-align: right;
+}
+
 /* 게시판-글수정 */
+#board.write form > div {
+    margin-top: 10px;
+    text-align: left;
+}
