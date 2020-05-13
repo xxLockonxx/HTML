@@ -1,28 +1,24 @@
 /* 초기화 */
-*{
-    margin : 0;
-    padding : 0;
-    font : normal 12px '돋움';
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 12px '돋움';
 }
 
-ul, ol{list-style: none;}
-a{text-decoration: none; color: #111;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #111;}
 input, textarea {outline: none;}
-body{}
+body {}
+#wrapper {}
 
-#wrapper {
-    
-}
-
-
-/* 회원 - 로그인*/
+/* 회원-로그인 */
 #user {}
 #user.login {
-    width : 360px;
-    height : auto;
-    margin : 100px auto;
+    width: 360px;
+    height: auto;
+    margin: 100px auto;            
 }
-#user.login > form{
+#user.login > form {
     position: relative;
     padding: 20px 20px 20px 50px;
     border: 1px solid #cfded8;
@@ -30,17 +26,16 @@ body{}
     border-bottom: 0;
 }
 
-#user.login > form > table {}
 #user.login > form > table img {
     width: 20px;
 }
 #user.login > form > table input {
-    width : 162px;
-    height : 22px;
+    width: 162px;
+    height: 22px;
     margin: 0 0 5px 0;
     border: 1px solid #e4eaec;
     background: #f7f7f7;
-    color: #111;
+    color: #111;            
 }
 #user.login > form > input[type=submit] {
     position: absolute;
@@ -52,7 +47,6 @@ body{}
     border: 1px solid #bebebe;
     background: #fdfdfd;
     color: #111;
-
 }
 
 #user.login > .info {
@@ -62,71 +56,67 @@ body{}
     background: #f5f6fa;
     overflow: hidden;
 }
-#user.login > .info > h3{}
-#user.login > .info > p{
+
+#user.login > .info > p {
     padding: 10px 0;
 }
-#user.login > .info > a{
-    float : right;
-
+#user.login > .info > a {
+    float: right;
 }
+
 /* 회원-약관 */
 #user.terms {
-width: 600px;
-margin: 60px auto;
-
+    width: 600px;
+    margin: 60px auto;            
 }
 #user.terms > table {
-width: 100%;
-border-top: 2px solid #111;
-border-collapse: collapse;
-border-spacing: 0;
+    width: 100%;
+    border-top: 2px solid #111;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 #user.terms > table > caption {
-text-align: left;
-font-weight: bold;
-padding: 10px, 0;
-
+    text-align: left;
+    font-weight: bold;
+    padding: 10px 0;
 }
 #user.terms > table tr {}
 #user.terms > table tr > td {
-padding: 6px 10px;
-border: 1px solid #e9e9e9;
+    padding: 6px 10px;
+    border: 1px solid #e9e9e9;
 }
+
 #user.terms > table textarea {
-width: 100%;
-height: 200px;
-resize: none;
-border: 1px solid #e4eaec;
-background: #f7f7f7;
-color: #111;
-padding: 2px;
+    width: 100%;
+    height: 200px;
+    resize: none;
+    border: 1px solid #e4eaec;
+    background: #f7f7f7;
+    color: #111;
+    padding: 2px;
 }
 #user.terms > table p {
-float: right;
+    float: right;
 }
 #user.terms > table p > input {}
 
 #user.terms > div {
-padding: 20px 0;
-text-align : right;
+    padding: 20px 0;
+    text-align: right;
 }
 #user.terms > div > a {
-padding: 8px;
-border: 1px solid #bebebe;
-color: #111;
-
+    padding: 8px;
+    border: 1px solid #bebebe;
+    color: #111;
 }
 #user.terms > div > a:nth-child(1) {background: #fdfdfd;}
 #user.terms > div > a:nth-child(2) {background: #e9e9e9;}
 
-/* 회원 - 회원가입*/
-
+/* 회원-회원가입 */
 #user.register {
     width: 600px;
     height: auto;
-    margin: 60px auto;
-
+    margin: 60px auto;            
 }
 #user.register > form {}
 #user.register table {
@@ -146,6 +136,7 @@ color: #111;
     padding: 6px 12px;
     border: 1px solid #e9e9e9;
 }
+
 #user.register table td:nth-child(1) {
     width: 80px;
     background: #f5f8f9;
@@ -155,26 +146,25 @@ color: #111;
     width: 160px;
     height: 22px;
     background: #f7f7f7;
-    border: 1px solid #e4eaee;
+    border: 1px solid #e4eaec;
     text-indent: 6px;
 }
-#user.register table span  {}
+#user.register table span {}
 
 #user.register table div {
     margin-bottom: 2px;
-
 }
-#user.register table div:nth-child(1) > input {width: 80px;}
-#user.register table div:nth-child(2) > input {width: 320px}
-#user.register table div:nth-child(3) > input {width: 320px}
-
-#user.register table div> button {
+#user.register table div:nth-child(1) > input {width:  80px;}
+#user.register table div:nth-child(2) > input {width: 320px;}
+#user.register table div:nth-child(3) > input {width: 320px;}
+#user.register table div > button {
     padding: 4px 13px;
     border: 1px solid #bebebe;
     background: #e9e9e9;
     color: #111;
 }
-#user.register > form > div {
+
+#user.register > form > div {            
     text-align: right;
 }
 #user.register > form > div > .btnCancel {
@@ -182,10 +172,9 @@ color: #111;
     border: 1px solid #bebebe;
     background: #fdfdfd;
     color: #111;
-
 }
-#user.register > form > div > .btnJoin{
-    padding: 6px;
+#user.register > form > div > .btnJoin {
+    padding: 7px;
     border: 1px solid #bebebe;
     background: #e9e9e9;
     color: #111;
@@ -193,8 +182,8 @@ color: #111;
 
 /* 게시판 - 공통 */
 #board {
-    width : 720px;
-    margin: 68px auto;
+    width: 720px;
+    margin: 60px auto;            
 }
 
 #board table {
@@ -202,6 +191,7 @@ color: #111;
     border-top: 2px solid #111;
     border-collapse: collapse;
     border-spacing: 0;
+    margin-top: 6px;
 }
 
 #board table th {
@@ -213,37 +203,33 @@ color: #111;
 }
 
 #board table td {
-    padding: 8px 5px;
+    padding: 12px 6px;
     border-top: 1px solid #e9e9e9;
     border-bottom: 1px solid #e9e9e9;
 }
-
 #board table td:nth-child(1) {
     width: 100px;
     background: #f5f8f9;
     text-align: center;
 }
 
-#board table input{
+#board table input {
     width: 100%;
     height: 24px;
-    border: 0;
+    border: 0;    
 }
-
 #board table textarea {
     width: 100%;
     height: 280px;
-    resize: none;
-    text-indent: 10px;
+    resize: none;    
     border: 0;
 }
 
-
-
-#board table {}
-#board .btnWrite { padding: 7px; border: 1px solid #3b3c3f; background: #4b545e; color: #fff;}
-#board .btnCancel{ padding: 8px; border: 1px solid #bebebe; background: #fdfdfd;}
-
+#board .btnWrite  { padding: 7px; border: 1px solid #3b3c3f; background: #4b545e; color: #fff;}
+#board .btnCancel { padding: 8px; border: 1px solid #bebebe; background: #fdfdfd; color: #111;}
+#board .btnDelete { padding: 8px; border: 1px solid #bebebe; background: #fdfdfd; color: #111;}
+#board .btnModify { padding: 8px; border: 1px solid #bebebe; background: #fdfdfd; color: #111;}
+#board .btnList   { padding: 8px; border: 1px solid #bebebe; background: #fdfdfd; color: #111;}
 
 /* 게시판 - 글목록 */
 #board.list {
@@ -253,14 +239,10 @@ color: #111;
 #board.list > article {}
 #board.list > article > p {
     position: absolute;
-    right : 0;
+    right: 0;
     top: 0;
 }
-#board.list > article .logout {}
-#board.list > article > table  {}
-#board.list > article > table tr {}
-#board.list > article > table tr > th {}
-#board.list > article > table tr > td {}
+
 #board.list > article > table tr > td:nth-child(1) {width:  50px; text-align: center; background: #fff;}
 #board.list > article > table tr > td:nth-child(2) {width:  auto; text-align: left;}
 #board.list > article > table tr > td:nth-child(3) {width: 100px; text-align: center;}
@@ -269,16 +251,14 @@ color: #111;
 
 #board.list > .paging {
     padding: 20px;
-    text-align: center;
+    text-align: center;            
 }
 #board.list > .paging > a {
     padding: 8px;
     background: #f2f2f2;
-    border: 1px solid #d7d7d7;
+    border: 1px solid #d7d7d7;            
 }
-#board.list > .paging > .prev {}
-#board.list > .paging > .next {}
-#board.list > .paging > .num {}
+
 #board.list > .paging > .current {
     border: 1px solid #6d6d6d;
     background: #888;
@@ -288,11 +268,58 @@ color: #111;
 #board.list > .btnWrite {
     position: absolute;
     bottom: 14px;
-    right: 0px;
-    
+    right: 0;
+}
+/* 게시판-글보기 */
+#board.view > div {
+    padding: 16px 0;
+    text-align: right;
 }
 
-/* 게시판-글보기 */
+#board.view > section {
+    padding: 20px;
+    border: 1px solid #e3e3e3;
+    background: #f9f9f9;
+    margin-bottom: 16px;
+}
+#board.view > section > h3 {
+    font-weight: bold;
+}
+
+#board.view > .commentList > article {
+    border-top: 1px dotted #999;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+#board.view > .commentList > article > textarea {
+    width: 100%;
+    height: 60px;
+    padding: 6px;
+    box-sizing: border-box;
+    resize: none;
+    border: 0;
+    background: transparent;
+}
+#board.view > .commentList > article > div {
+    text-align: right;
+}
+
+#board.view > .commentList > .empty {
+    padding: 20px 0;
+    text-align: center;
+}
+
+#board.view > .commentForm > form > textarea {
+    width: 100%;
+    height: 60px;
+    border: 1px solid #e4eaec;
+    margin: 10px 0;
+    resize: none;
+}
+#board.view > .commentForm > form > div {
+    text-align: right;
+}
 
 /* 게시판-글쓰기 */
 #board.write {}
@@ -302,7 +329,7 @@ color: #111;
 }
 
 /* 게시판-글수정 */
-#board.write form > div {
+#board.modify form > div {
     margin-top: 10px;
-    text-align: left;
+    text-align: right;
 }
