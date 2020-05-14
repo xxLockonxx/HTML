@@ -18,7 +18,6 @@
         #wrapper {
             width: 980px;
             height: auto;
-            border: 1px solid red;
             margin: 0 auto;
         }
         
@@ -101,52 +100,212 @@
             top: -12px;
         }
         
-    
-
+        
 
         /* 메인 */
 
         main {
             width: 100%;
             height: auto;
-            border: 1px solid blue;
-            box-sizing: border-box;
         }
 
         main > div {
             width: 100%;
-            border: 1px solid green;
-            box-sizing: border-box;
             margin-top: 10px;
         }
 
         /* 슬라이더 */
         main> .slider{
+            position: relative;
             height: 312px;
         }
+        main > .slider > img{
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            z-index: 100;
+        }
+        
+        main > .slider > ul {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
 
+        }
+        main > .slider > ul > li {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        main > .slider > ul > li:nth-child(1) {left: 0;}
+        main > .slider > ul > li:nth-child(2) {left: 100%;}
+        main > .slider > ul > li:nth-child(3) {left: 200%;}
+        
+        main > .slider > .banner {
+            position: absolute;
+            right: 0;
+            top:0;
+            width: 230px;
+            height: 310px;
+            background-image: url('./img/main_banner_bg.jpg');
+        }
+        main > .slider > .banner > img:nth-child(2){
+            margin-top: 20px;
+            margin-left: 10px;
+            }
+        main > .slider > .banner > img:nth-child(3){
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        main > .slider > .banner > img:nth-child(1) {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            
+        }
+        
         /* 바로가기 */
         main> .quick{
             height: 74px;
         }
 
+        main > .quick > a {
+            float: left;
+            display: block;
+            width: 50%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            
+        }
+
+        main > .quick > a:nth-child(1) {background-image: url('./img/main_banner_sub1_bg.jpg');}
+        main > .quick > a:nth-child(2) {background-image: url('./img/main_banner_sub2_bg.jpg');}
+
         /* 최신글 리스트 */
         main> .latest{
             height: 186px;
+        }
+        
+        main> .latest > div {
+            position: relative;
+            float: left;
+            width: 33.333%;
+            height: 100%;
+        }
+
+        main> .latest > div > img:first-child {
+            position: absolute;
+            left: 0;
+            top: 12px;
+        }
+        main> .latest > div > img:nth-child(2) {
+            position: absolute;
+            left : 0;
+            bottom : 24px;
+        }
+
+        main> .latest > div > table {
+            position: absolute;
+            right: 10px;
+            bottom: 22px;
+        }
+        main> .latest > div > table tr {}
+        main> .latest > div > table tr > td {}
+        main> .latest > div > table tr > td:nth-child(2) {
+            display: block;
+            width: 128px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            line-height: 19px;
         }
 
         /* 정보 */
         main> .info{
             height: 154px;
+            padding: 14px 0;
+            box-sizing: border-box;
+            background-image: url('./img/main_cs_top_line.png');
+            background-repeat: no-repeat;
+            background-position-y: -3px;
         }
+
+        main > .info > div {
+            float: left;
+            height: 100px;
+           
+        }
+        main > .info > div > img {
+            margin-bottom: 16px;
+        }
+        main > .info > div > ul > li {
+            line-height: 19px;
+        }
+
+        main > .info > div:nth-child(1) {width: 385px;}
+        main > .info > div:nth-child(2) {
+            width: 229px;
+            border-left: 1px solid #d7d7d7;
+            border-right: 1px solid #d7d7d7;
+            padding-left: 20px;
+            box-sizing: border-box;
+            }
+        main > .info > div:nth-child(3) {width: 364px;}
+
+        main > .info > .cs > div:nth-of-type(1) {
+            margin-bottom: 16px;
+            overflow: hidden;
+    
+        }
+        main > .info > .cs > div:nth-of-type(1) > * {
+            float: left;
+            margin-right: 16px;
+            }
+
         /* 푸터 */
         footer {
             width: 100%;
             height: 120px;
-            border: 1px solid blue;
-            box-sizing: border-box;
             margin-top: 10px;
+            border-top: 1px solid #c5bd9f;
         }
+        footer > img {
+        }
+
+        footer > p {
+            float: right;
+            margin-right: 180px;
+            margin-top: 20px;
+            line-height: 22px;
+        }
+        
+        footer > p > span {
+            font-weight: bold;
+            color: #a588a5
+        }
+
+        .pop {
+            position: absolute;
+            left: 50%;
+            top: 150px;
+            margin-left: 500px;
+
+            border: 1px solid blue;
+            
+        }
+        .pop > a {
+            position: fixed;
+        }
+        .popo > a:nth-child(1) {
+            background-image: url('./img/float_banner_bg.png');
+        }
+        .popo > a:nth-child(2) {}
+       
+
     </style>
 </head>
 <body>
@@ -172,12 +331,172 @@
             <img src="./img/head_txt_img.png" alt="3만원 이상 무료배송, 팜카드 10% 적립">
         </header>
         <main>
-            <div class="slider"></div>
-            <div class="quick"></div>
-            <div class="latest"></div>
-            <div class="info"></div>
+            <div class="slider">
+                
+                <img src="./img/main_slide_img_tit.png" alt="사람과 자연을 사랑하는 팜스토리">                
+                
+                <ul>
+                    <li><img src="./img/main_slide_img1.jpg" alt="slide1"></li>
+                    <li><img src="./img/main_slide_img2.jpg" alt="slide2"></li>
+                    <li><img src="./img/main_slide_img3.jpg" alt="slide3"></li>
+                </ul>
+
+
+                <div class="banner">
+                    <img src="./img/main_banner_txt.png" alt="GRAND OPEN"/>
+                    <img src="./img/main_banner_tit.png" alt="30% 할인 이벤트"/>
+                    <img src="./img/main_banner_img.png" alt="과일">
+                </div>
+            </div>
+            <div class="quick">
+                <a href="#"><img src="./img/main_banner_sub1_tit.png" alt="오늘의 식단"></a>
+                <a href="#"><img src="./img/main_banner_sub2_tit.png" alt="나도 요리사"></a>
+            </div>
+            <div class="latest">
+                <div>
+                    <img src="./img/main_latest1_tit.png" alt="텃밭가꾸기">
+                    <img src="./img/main_latest1_img.jpg" alt="이미지1">
+                    <table border="0">
+                    <tr>
+                        <td>></td>
+                        <td>안녕하세요. 반갑습니다.</td>
+                        <td>20-05-14</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>안녕하세요. 반갑습니다.</td>
+                        <td>20-05-14</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>안녕하세요. 반갑습니다.</td>
+                        <td>20-05-14</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>긴뚄니니. 반갑습니다.</td>
+                        <td>20-05-14</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>안녕하세요. 반갑습니다.</td>
+                        <td>20-05-14</td>
+                    </tr>
+                    </table>
+                </div>
+                <div>
+                    <img src="./img/main_latest2_tit.png" alt="귀농학교">
+                    <img src="./img/main_latest2_img.jpg" alt="이미지2">
+                    <table border="0">
+                    <tr>
+                        <td>></td>
+                        <td>안녕하세요. 반갑습니다.</td>
+                        <td>20-05-14</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>채소탈수기. 반갑습니다.</td>
+                        <td>20-05-14</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>안녕하세요. 반갑습니다.</td>
+                        <td>20-05-14</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>안녕하세요. 반갑습니다.</td>
+                        <td>20-05-14</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>안녕하세요. 반갑습니다.</td>
+                        <td>20-05-14</td>
+                    </tr>
+                    </table>
+                </div>
+                <div>
+                    <img src="./img/main_latest3_tit.png" alt="농작물이야기">
+                    <img src="./img/main_latest3_img.jpg" alt="이미지3">
+                    <table border="0">
+                    <tr>
+                        <td>></td>
+                        <td>오또카지잉. 반갑습니다.</td>
+                        <td>20-05-14</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>안녕하세요. 반갑습니다.</td>
+                        <td>20-05-14</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>안녕하세요. 반갑습니다.</td>
+                        <td>20-05-14</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>안녕하세요. 반갑습니다.</td>
+                        <td>20-05-14</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>안녕하세요. 반갑습니다.</td>
+                        <td>20-05-14</td>
+                    </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="info">
+                <div class="cs">
+                    <img src="./img/main_sub2_cs_tit.png" alt="고객센터안내"> 
+                    <div>
+                        <img src="./img/main_sub2_cs_img.png" alt="이미지">
+                        <img src="./img/main_sub2_cs_txt.png" alt="1666-777">
+                        <ol>
+                            <li>평일: AM 09:00 ~ PM 06:00</li>
+                            <li>점심: PM 12:00 ~ PM 01:00</li>
+                            <li>토, 일요일, 공휴일 휴무</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <a href="#"><img src="./img/main_sub2_cs_bt1.png" alt="고객문의"></a>
+                        <a href="#"><img src="./img/main_sub2_cs_bt2.png" alt="자주묻는 질문"></a>
+                        <a href="#"><img src="./img/main_sub2_cs_bt3.png" alt="배송 조회"></a>
+                    </div>
+                
+                
+                
+                
+                
+                </div>
+                <div class="Account">
+                    <img src="./img/main_sub2_account_tit.png" alt="계좌안내">
+                    <ul>
+                        <li>기업은행 123-456789-01-01-012</li>
+                        <li>국민은행 01-1234-56789</li>
+                        <li>우리은행 123-456789-01-01-012</li>
+                        <li>하나은행 123-456789-01-01</li>
+                        <li>예 금 주 (주)팜스토리</li>
+                    </ul>
+                
+                </div>
+                <div></div>
+            </div>
         </main>
-        <footer></footer>
+        <footer>
+            <img src="./img/footer_logo.png" alt="푸터로고">
+            <p>
+                (주)더조은 / 사업자번호 123-45-67890 / 통신판매신고 제 2013호 / 등록번호 더조은1234 / 발행인 : 홍길동<br/>
+                대표자 : 홍길동 / 개인정보관리자 : 홍길동 / ☎ 051) 123-4567 / 부산광역시 부산진구 부전동 123 5층<br/>
+                <span>Copyright ⓒ(주)더조은 All rights reserved.</span>
+            </p>
+        </footer>
+
+        <div class="pop">
+            <a href="#"><img src="./img/float_banner_tit.png" alt="이벤트"><img src="./img/float_banner_bg.png" alt="배경"></a>
+            <a href="#"><img src="./img/float_banner_txt.png" alt="장보기"></a>
+        </div>
 
     </div>
 </body>
