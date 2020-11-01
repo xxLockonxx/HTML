@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CART::무엇을 담아볼까?</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+            <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+            <link rel="stylesheet" href="../css/style.css">
+            <script src="../js/menu.js"></script>
+            <script src="../js/sideMenu.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <div class="top">
+                    <div>
+                        <a href="../member/login.html">로그인</a> | 
+                        <a href="../member/join.html">회원가입</a> |
+                        <a href="../mypage/mypage.html">마이페이지</a> |
+                        <a href="../shop/cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;장바구니</a> |
+                        <a href="#">고객센터</a>
+                    </div>
+                </div>
+                <div class="logo">
+                    <div>
+                        <a href="../index.html"><img src="../img/header_logo.png" alt="로고"/></a>           
+                    </div>
+                </div>
+                <div class="menu">
+                    <div>
+                        <ul>
+                            <li><a href="../aboutus.html">ABOUT US</a></li>
+                            <li><a href="../recipe.html">RECIPE</a></li>
+                            <li><a href="../shop.html">SHOP</a></li>
+                            <li><a href="../review.html">REVIEW</a></li>
+                            <li><a href="../notice.html">NOTICE</a></li>
+                            <form action="../search.html">
+                                <input type="text" name="search"/>
+                                <button><i class="fa fa-search"></i></button>
+                            </form> 
+                        </ul>
+                        <aside class="aside_index">
+                        <!--최근 본 상품 배너-->
+                            <article class="recent_index">
+                                <div>
+                                    <h1><i class="fas fa-shopping-bag"></i> 최근 본 상품</h1>
+                                    <a href="#">
+                                        <div class="thumb">
+                                            <img src="https://dummyimage.com/130x130/ebebeb/4d4d4d&text=130x130+product+image" alt="t1">
+                                        </div>
+                                        <h2>상품명</h2>
+                                        <div class ="org_price">
+                                            <del>
+                                                30,000
+                                            </del>
+                                            <span>
+                                                10%
+                                            </span>
+                                        </div>
+                                        <div class="dis_price">
+                                            <ins>
+                                                27,000
+                                            </ins>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div>
+                                    <h1><i class="fas fa-film"></i> 최근 본 영상</h1>
+                                    <div>
+                                        <a href="#">
+                                            <img width="130" height="130" src="https://dummyimage.com/130x130/ebebeb/4d4d4d&text=130x130+thumbnail" alt="best video">
+                                            <h2>영상제목</h2>
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                        </aside>
+                    </div>
+                </div>
+            </header> 
+            <main>
+                <section>
+                    <!--장바구니-->
+                    <section id ="cart">
+                        <section>
+                            <a href="./recipe.html"><h3>CART</h3></a>
+                            <nav>
+                                <p><a href="../index.html">HOME</a> > <strong>장바구니</strong></p>
+                            </nav>
+                        </section>
+                        <section>
+                            <form action="#">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <input type="checkbox" name="all">
+                                            </th>
+                                            <th>상품명</th>
+                                            <th>총수량</th>
+                                            <th>판매가</th>
+                                            <th>포인트</th>
+                                            <th>배송비</th>
+                                            <th>소계</th>
+                                        </tr>
+                                    </thead>
+                                <tbody>
+                                    <tr class='empty'>
+                                        <td colspan="7">장바구니에 상품이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" name>
+                                        </td>
+                                        <td>
+                                            <article>
+                                                <a href="#">
+                                                    <img src="../img/new_product1.png" alt="">
+                                                </a>
+                                                <div>
+                                                    <h2>
+                                                        <a href="#">파르미지아노 레지아노</a>
+                                                    </h2>
+                                                    <p>(100g 당: 634원)</p>
+                                                </div>
+                                            </article>
+                                        </td>
+                                        <td>1</td>
+                                        <td>8,550원</td>
+                                        <td>855</td>
+                                        <td>3000원</td>
+                                        <td>8,550원</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                                <input type="button" name="del" value="선택삭제">
+                            </form>
+                        </section>
+                        <div class="info">
+                            <h2>전체합계</h2>
+                            <table border="0">
+                                <tbody>
+                                    <tr>
+                                        <td>상품수</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>상품금액</td>
+                                        <td>8,550원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>할인금액</td>
+                                        <td>-1,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배송비</td>
+                                        <td>3000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>포인트</td>
+                                        <td>855</td>
+                                    </tr>
+                                    <tr>
+                                        <td>전체주문금액</td>
+                                        <td>10,550원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="./order.html"><input type="button" name value="주문하기"></a>
+                        </div>
+                    </section>
+                </section>
+            </main>
+            <footer>
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">서비스이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">전자금융거래약관</a></li>
+                </ul>
+                <article>
+                    <div>
+                        <p>
+                            <img src="../img/footer_logo.png" alt="로고">
+                        </p>
+                        <p>
+                            <strong>㈜제시마켓</strong>
+                            <br>
+                                부산시 동래구 사직로 80 (사직동 다람파이낸스센터
+                            <br>
+                                대표이사 : 김성민
+                            <br>
+                                사업자등록번호 : 220-81-83676 사업자정보확인
+                            <br>
+                                통신판매업신고 : 동래 10480호 Fax : 051-555-9232
+                
+                        </p>
+                        <p>
+                            <strong>고객센터</strong>
+                            <br>
+                            Tel : 1234-5678 (평일 09:00~18:00)
+                            <br>
+                            스마일클럽/SVIP 전용 : 1522-5700 (365일 09:00~18:00)
+                            <br>
+                            부산시 동래구 사직로 80 다람빌딩 6층
+                            <br>
+                            Fax : 051-555-9232 | Mail : jessie@jessietable.co.kr
+                        </p>
+                    </div>
+                </article>
+                
+                <button type="button" id="top" style="display: inline-block;">상단이동</button>
+            </footer>
+        </div>    
+    </body>
+</html>

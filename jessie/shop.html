@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SHOP::전체상품</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/menu.js"></script>
+        <script src="./js/sideMenu.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="top">
+                <div>
+                    <a href="./member/login.html">로그인</a> | 
+                    <a href="./member/join.html">회원가입</a> | 
+                    <a href="./mypage/mypage.html">마이페이지</a> |
+                    <a href="./shop/cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;장바구니</a> |
+                    <a href="#">고객센터</a>
+                </div>
+            </div>
+            <div class="logo">
+                <div>
+                    <a href="./index.html"><img src="./img/header_logo.png" alt="로고"/></a>           
+                </div>
+            </div>
+            <div class="menu">
+                <div>
+                    <ul>
+                        <li><a href="./aboutus.html">ABOUT US</a></li>
+                        <li><a href="./recipe.html">RECIPE</a></li>
+                        <li><a href="./shop.html">SHOP</a></li>
+                        <li><a href="./review.html">REVIEW</a></li>
+                        <li><a href="./notice.html">NOTICE</a></li>
+                        <form action="./search.html">
+                            <input type="text" name="search"/>
+                            <button><i class="fa fa-search"></i></button>
+                        </form> 
+                    </ul>
+                    <aside class="aside_index">
+                     <!--최근 본 상품 배너-->
+                        <article class="recent_index">
+                            <div>
+                                <h1><i class="fas fa-shopping-bag"></i> 최근 본 상품</h1>
+                                <a href="#">
+                                    <div class="thumb">
+                                        <img src="https://dummyimage.com/130x130/ebebeb/4d4d4d&text=130x130+product+image" alt="t1">
+                                    </div>
+                                    <h2>상품명</h2>
+                                    <div class ="org_price">
+                                        <del>
+                                            30,000
+                                        </del>
+                                        <span>
+                                            10%
+                                        </span>
+                                    </div>
+                                    <div class="dis_price">
+                                        <ins>
+                                            27,000
+                                        </ins>
+                                    </div>
+                                </a>
+                            </div>
+                            <div>
+                                <h1><i class="fas fa-film"></i> 최근 본 영상</h1>
+                                <div>
+                                    <a href="#">
+                                        <img width="130" height="130" src="https://dummyimage.com/130x130/ebebeb/4d4d4d&text=130x130+thumbnail" alt="best video">
+                                        <h2>영상제목</h2>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </aside>
+                </div>
+            </div>
+        </header>   
+        <main>
+            <section>
+                <!-- All 영역 -->
+                <section class="all">
+
+                    <section>
+                        <a href="./shop.html"><h3>SHOP</h3></a>
+                        <nav>
+                            <p><a href="./index.html">HOME</a> > <strong>SHOP</strong></p>
+                        </nav>
+                    </section>
+
+                    <!--정렬방식 링크-->
+                    <ul class="sort">
+                        <li><a href="#">판매많은순</a></li>
+                        <li><a href="#">낮은가격순</a></li>
+                        <li><a href="#">높은가격순</a></li>
+                        <li><a href="#">평점높은순</a></li>
+                        <li><a href="#">후기많은순</a></li>
+                        <li><a href="#">최근등록순</a></li>
+                    </ul>
+
+                    <!--상품목록 10개-->
+                    <section class="list">
+                        <article>
+                            <ul>
+                                <li>
+                                    <a href="./shop/view.html" class="thumb">
+                                        <img src="img/new_product1.png" alt="상품이미지">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./shop/view.html"><h3 class="name">파르미지아노 레지아노</h3></a>
+                                    <p class="desc">
+                                        <a href="#">(100g 당: 634원)</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="dis_price"> 
+                                        <ins>
+                                            8,550
+                                        </ins>
+                                    </div>
+                                    <div class="org_price">
+                                        <del>
+                                            9,500
+                                        </del>
+                                        <span>
+                                            10%
+                                        </span>
+                                    </div>
+                                    <span class="freeshipping">무료배송</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <button class="cart" type="button">장바구니 담기</button>
+                                    </h4>
+                                    <h4>
+                                        <i class="fas fa-home"></i>
+                                        &nbsp;이마트
+                                    </h4>
+                                    <h5 class="badge power">판매자등급</h5>
+                                    <h6 class="rating star6">상품평</h6>
+                                </li>
+                            </ul>
+                        </article>
+                        <article>
+                            <ul>
+                                <li>
+                                    <a href="#" class="thumb">
+                                        <img src="img/all_product1.png" alt="상품이미지">
+                                    </a>
+                                </li>
+                                <li>
+                                    <h3 class="name">통마늘 800g</h3>
+                                    <p class="desc">
+                                        <a href="#">(100g당: 1,360원)</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="dis_price"> 
+                                        <ins>
+                                            19,000
+                                        </ins>
+                                    </div>
+                                    <div class="org_price">
+                                        <del>
+                                            20,000
+                                        </del>
+                                        <span>
+                                            10%
+                                        </span>
+                                    </div>
+                                    <span class="freeshipping">무료배송</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <button class="cart" type="button">장바구니 담기</button>
+                                    </h4>
+                                    <h4>
+                                        <i class="fas fa-home"></i>
+                                        &nbsp;이마트
+                                    </h4>
+                                    <h5 class="badge power">판매자등급</h5>
+                                    <h6 class="rating star6">상품평</h6>
+                                </li>
+                            </ul>
+                        </article>
+                        <article>
+                            <ul>
+                                <li>
+                                    <a href="#" class="thumb">
+                                        <img src="img/best_product1.png" alt="상품이미지">
+                                    </a>
+                                </li>
+                                <li>
+                                    <h3 class="name">[국내산]방울토마토</h3>
+                                    <p class="desc">
+                                        <a href="#">(100g당 : 798원)</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="dis_price"> 
+                                        <ins>
+                                            5,400
+                                        </ins>
+                                    </div>
+                                    <div class="org_price">
+                                        <del>
+                                            6,000
+                                        </del>
+                                        <span>
+                                            10%
+                                        </span>
+                                    </div>
+                                    <span class="freeshipping">무료배송</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <button class="cart" type="button">장바구니 담기</button>
+                                    </h4>
+                                    <h4>
+                                        <i class="fas fa-home"></i>
+                                        &nbsp;이마트
+                                    </h4>
+                                    <h5 class="badge power">판매자등급</h5>
+                                    <h6 class="rating star6">상품평</h6>
+                                </li>
+                            </ul>
+                        </article>
+                        <article>
+                            <ul>
+                                <li>
+                                    <a href="#" class="thumb">
+                                        <img src="https://dummyimage.com/230x230/ebebeb/4d4d4d&text=230x230+product+image" alt="상품이미지">
+                                    </a>
+                                </li>
+                                <li>
+                                    <h3 class="name">상품명</h3>
+                                    <p class="desc">
+                                        <a href="#">상품설명</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="dis_price"> 
+                                        <ins>
+                                            27,000
+                                        </ins>
+                                    </div>
+                                    <div class="org_price">
+                                        <del>
+                                            30,000
+                                        </del>
+                                        <span>
+                                            10%
+                                        </span>
+                                    </div>
+                                    <span class="freeshipping">무료배송</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <button class="cart" type="button">장바구니 담기</button>
+                                    </h4>
+                                    <h4>
+                                        <i class="fas fa-home"></i>
+                                        &nbsp;판매자상점명
+                                    </h4>
+                                    <h5 class="badge great">판매자등급</h5>
+                                    <h6 class="rating star2">상품평</h6>
+                                </li>
+                            </ul>
+                        </article>
+                        <article>
+                            <ul>
+                                <li>
+                                    <a href="#" class="thumb">
+                                        <img src="https://dummyimage.com/230x230/ebebeb/4d4d4d&text=230x230+product+image" alt="상품이미지">
+                                    </a>
+                                </li>
+                                <li>
+                                    <h3 class="name">상품명</h3>
+                                    <p class="desc">
+                                        <a href="#">상품설명</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="dis_price"> 
+                                        <ins>
+                                            27,000
+                                        </ins>
+                                    </div>
+                                    <div class="org_price">
+                                        <del>
+                                            30,000
+                                        </del>
+                                        <span>
+                                            10%
+                                        </span>
+                                    </div>
+                                    <span class="freeshipping">무료배송</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <button class="cart" type="button">장바구니 담기</button>
+                                    </h4>
+                                    <h4>
+                                        <i class="fas fa-home"></i>
+                                        &nbsp;판매자상점명
+                                    </h4>
+                                    <h5 class="badge great">판매자등급</h5>
+                                    <h6 class="rating star2">상품평</h6>
+                                </li>
+                            </ul>
+                        </article>
+                        <article>
+                            <ul>
+                                <li>
+                                    <a href="#" class="thumb">
+                                        <img src="https://dummyimage.com/230x230/ebebeb/4d4d4d&text=230x230+product+image" alt="상품이미지">
+                                    </a>
+                                </li>
+                                <li>
+                                    <h3 class="name">상품명</h3>
+                                    <p class="desc">
+                                        <a href="#">상품설명</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="dis_price"> 
+                                        <ins>
+                                            27,000
+                                        </ins>
+                                    </div>
+                                    <div class="org_price">
+                                        <del>
+                                            30,000
+                                        </del>
+                                        <span>
+                                            10%
+                                        </span>
+                                    </div>
+                                    <span class="freeshipping">무료배송</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <button class="cart" type="button">장바구니 담기</button>
+                                    </h4>
+                                    <h4>
+                                        <i class="fas fa-home"></i>
+                                        &nbsp;판매자상점명
+                                    </h4>
+                                    <h5 class="badge great">판매자등급</h5>
+                                    <h6 class="rating star2">상품평</h6>
+                                </li>
+                            </ul>
+                        </article>
+                        <article>
+                            <ul>
+                                <li>
+                                    <a href="#" class="thumb">
+                                        <img src="https://dummyimage.com/230x230/ebebeb/4d4d4d&text=230x230+product+image" alt="상품이미지">
+                                    </a>
+                                </li>
+                                <li>
+                                    <h3 class="name">상품명</h3>
+                                    <p class="desc">
+                                        <a href="#">상품설명</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="dis_price"> 
+                                        <ins>
+                                            27,000
+                                        </ins>
+                                    </div>
+                                    <div class="org_price">
+                                        <del>
+                                            30,000
+                                        </del>
+                                        <span>
+                                            10%
+                                        </span>
+                                    </div>
+                                    <span class="freeshipping">무료배송</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <button class="cart" type="button">장바구니 담기</button>
+                                    </h4>
+                                    <h4>
+                                        <i class="fas fa-home"></i>
+                                        &nbsp;판매자상점명
+                                    </h4>
+                                    <h5 class="badge great">판매자등급</h5>
+                                    <h6 class="rating star2">상품평</h6>
+                                </li>
+                            </ul>
+                        </article>
+                        <article>
+                            <ul>
+                                <li>
+                                    <a href="#" class="thumb">
+                                        <img src="https://dummyimage.com/230x230/ebebeb/4d4d4d&text=230x230+product+image" alt="상품이미지">
+                                    </a>
+                                </li>
+                                <li>
+                                    <h3 class="name">상품명</h3>
+                                    <p class="desc">
+                                        <a href="#">상품설명</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="dis_price"> 
+                                        <ins>
+                                            27,000
+                                        </ins>
+                                    </div>
+                                    <div class="org_price">
+                                        <del>
+                                            30,000
+                                        </del>
+                                        <span>
+                                            10%
+                                        </span>
+                                    </div>
+                                    <span class="freeshipping">무료배송</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <button class="cart" type="button">장바구니 담기</button>
+                                    </h4>
+                                    <h4>
+                                        <i class="fas fa-home"></i>
+                                        &nbsp;판매자상점명
+                                    </h4>
+                                    <h5 class="badge great">판매자등급</h5>
+                                    <h6 class="rating star2">상품평</h6>
+                                </li>
+                            </ul>
+                        </article>
+                        <article>
+                            <ul>
+                                <li>
+                                    <a href="#" class="thumb">
+                                        <img src="https://dummyimage.com/230x230/ebebeb/4d4d4d&text=230x230+product+image" alt="상품이미지">
+                                    </a>
+                                </li>
+                                <li>
+                                    <h3 class="name">상품명</h3>
+                                    <p class="desc">
+                                        <a href="#">상품설명</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <div class="dis_price"> 
+                                        <ins>
+                                            27,000
+                                        </ins>
+                                    </div>
+                                    <div class="org_price">
+                                        <del>
+                                            30,000
+                                        </del>
+                                        <span>
+                                            10%
+                                        </span>
+                                    </div>
+                                    <span class="freeshipping">무료배송</span>
+                                </li>
+                                <li>
+                                    <h4>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <button class="cart" type="button">장바구니 담기</button>
+                                    </h4>
+                                    <h4>
+                                        <i class="fas fa-home"></i>
+                                        &nbsp;판매자상점명
+                                    </h4>
+                                    <h5 class="badge great">판매자등급</h5>
+                                    <h6 class="rating star2">상품평</h6>
+                                </li>
+                            </ul>
+                        </article>
+                    </section>
+
+                    <!--상품목록 페이지번호-->
+                    <div class="paging">
+                        <span class="prev">
+                            <a href="#"><&nbsp;이전</a>
+                        </span>
+                        <span class="num">
+                            <a href="#" class="on">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                        </span>
+                        <span class="next">
+                            <a href="#">다음&nbsp;></a>
+                        </span>
+                    </div>
+
+                </section>
+            </section>
+        </main>
+    </div>    
+</body>
+
+<footer>
+    <ul>
+        <li><a href="#">회사소개</a></li>
+        <li><a href="#">서비스이용약관</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">전자금융거래약관</a></li>
+    </ul>
+    <article>
+        <div>
+            <p>
+                <img src="./img/footer_logo.png" alt="로고">
+            </p>
+            <p>
+                <strong>㈜제시마켓</strong>
+                <br>
+                    부산시 동래구 사직로 80 (사직동 다람파이낸스센터
+                <br>
+                    대표이사 : 김성민
+                <br>
+                    사업자등록번호 : 220-81-83676 사업자정보확인
+                <br>
+                    통신판매업신고 : 동래 10480호 Fax : 051-555-9232
+    
+            </p>
+            <p>
+                <strong>고객센터</strong>
+                <br>
+                Tel : 1234-5678 (평일 09:00~18:00)
+                <br>
+                스마일클럽/SVIP 전용 : 1522-5700 (365일 09:00~18:00)
+                <br>
+                부산시 동래구 사직로 80 다람빌딩 6층
+                <br>
+                Fax : 051-555-9232 | Mail : jessie@jessietable.co.kr
+            </p>
+        </div>
+    </article>
+    
+    <button type="button" id="top" style="display: inline-block;">상단이동</button>
+</footer>
+
+</html>
